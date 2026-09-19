@@ -1,0 +1,9 @@
+ALTER TABLE clients ADD COLUMN address TEXT;
+
+ALTER TABLE clients ALTER COLUMN phone TYPE VARCHAR(30);
+
+ALTER TABLE Trainers ADD COLUMN email VARCHAR(100);
+
+ALTER TABLE Trainers ADD CONSTRAINT unique_trainer_email UNIQUE (email);
+
+ALTER TABLE Halls RENAME TO Gyms;
